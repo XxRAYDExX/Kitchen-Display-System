@@ -1,0 +1,283 @@
+/* ========================================
+   GLOBAL
+======================================== */
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #2b2d31;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   PAGE
+======================================== */
+
+.kitchen-container {
+  min-height: 100vh;
+  background: #2b2d31;
+  color: #f2f3f5;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.kitchen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 35px;
+
+  background: #313338;
+
+  border-bottom: 1px solid #4b4f56;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+.kitchen-header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: white;
+}
+
+.kitchen-header p {
+  margin-top: 5px;
+  color: #b5bac1;
+}
+
+/* ========================================
+   SESSION CODE
+======================================== */
+
+.session-card {
+  background: #1976d2;
+  color: white;
+
+  padding: 14px 20px;
+
+  border-radius: 12px;
+
+  font-weight: bold;
+
+  box-shadow: 0 6px 18px rgba(25, 118, 210, 0.3);
+}
+
+.session-card h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* ========================================
+   ORDER COUNTER
+======================================== */
+
+.order-counter {
+  width: 95px;
+  height: 95px;
+
+  border-radius: 50%;
+
+  background: #ff9800;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.3);
+}
+
+.order-count {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.order-label {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   ORDER RAIL
+======================================== */
+
+.ticket-rail {
+  flex: 1;
+
+  display: flex;
+
+  gap: 25px;
+
+  padding: 30px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.ticket-rail::-webkit-scrollbar {
+  height: 12px;
+}
+
+.ticket-rail::-webkit-scrollbar-track {
+  background: #2b2d31;
+}
+
+.ticket-rail::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 20px;
+}
+
+.ticket-rail::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/* ========================================
+   ORDER CARD
+======================================== */
+
+.ticket {
+  width: 320px;
+  min-width: 320px;
+
+  background: #3a3d42;
+
+  color: white;
+
+  border-radius: 16px;
+
+  padding: 22px;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+
+  display: flex;
+  flex-direction: column;
+
+  animation: slideIn 0.3s ease;
+}
+
+/* ========================================
+   CARD HEADER
+======================================== */
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-header h3 {
+  margin: 0;
+  color: #5ba8ff;
+  font-size: 24px;
+}
+
+.ticket-header small {
+  color: #b5bac1;
+}
+
+.ticket hr {
+  border: none;
+  border-top: 1px solid #4b4f56;
+  margin: 16px 0;
+}
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.ticket-section {
+  margin-bottom: 18px;
+}
+
+.ticket-section h4 {
+  margin: 0 0 8px;
+
+  color: #b5bac1;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.ticket-section p {
+  margin: 0;
+
+  color: white;
+
+  font-size: 24px;
+
+  font-weight: bold;
+}
+
+.ticket-section pre {
+  margin: 0;
+
+  white-space: pre-wrap;
+
+  font-family: inherit;
+
+  color: #f2f3f5;
+
+  line-height: 1.6;
+}
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.ticket-image {
+  width: 100%;
+
+  margin-top: 18px;
+
+  border-radius: 12px;
+
+  border: 1px solid #4b4f56;
+}
+
+/* ========================================
+   QR CODE (if you add it back later)
+======================================== */
+
+.qr-section {
+  background: white;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   ANIMATION
+======================================== */
+
+@keyframes slideIn {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

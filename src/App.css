@@ -1,0 +1,17 @@
+.app {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.phone {
+  flex: 2;
+  background-color: #000;
+  padding: 20px;
+}
+
+.kitchen {
+  flex: 3;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+}
